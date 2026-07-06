@@ -1,27 +1,39 @@
 import React from "react";
+import { Navbar } from "./Navbar.jsx";
+import { Jumbotron } from "./Jumbotron.jsx";
+import { Card } from "./card.jsx";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+
+
 
 //create your first component
 const Home = () => {
 	return (
-		<div className="text-center">
-            
+		<>
+			<Navbar>
+			</Navbar>
+			<div className="container">
 
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
+				<Jumbotron></Jumbotron>
+				<div className=" row p-4 g-3">
+					<div className="col-12 col-sm-6 col-lg-3">
+						<Card link="https://fastly.picsum.photos/id/599/500/325.jpg?hmac=hP_9q5C72x_d0y_Yt-xc-lt6ZG3KsLoKIfAyJD1UYYk" name="Montaña" texto="Se ve tranquilo o que xD" bton="Vamos a la montaña"></Card>
+					</div>
+					<div className="col-12 col-sm-6 col-lg-3">
+						<Card link="https://fastly.picsum.photos/id/548/500/325.jpg?hmac=ENDpHhZiwBUVAi-ZXtt1svbi380dU3LOsr6Ao-5_-Js" name="Fuego" texto="Se ve canlentito noo?" bton="Quemame"></Card>
+					</div>
+					<div className="col-12 col-sm-6 col-lg-3">
+						<Card link="https://fastly.picsum.photos/id/702/500/325.jpg?hmac=fdnZNOqkMr5u0nS2RggYfC7G2lH1J8qyuB577nCOLMs" name="Playa" texto="Se ve relajadito no?" bton="Dame Paz"></Card>
+					</div>
+					<div className="col-12 col-sm-6 col-lg-3">
+						<Card link="https://fastly.picsum.photos/id/404/500/325.jpg?hmac=BxEAH9nzNzk7b_HvhBVTo-dqE7XfRojBHssZCptbHWE" name="Barranco" texto="Se ve peligrosito no?" bton="No me empujes"></Card>
+					</div>
+				</div>
+
+			</div>
+
+		</>
+
 	);
 };
 
